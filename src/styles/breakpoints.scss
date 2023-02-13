@@ -1,0 +1,30 @@
+$mobile: 767;
+$tablet: 1365;
+
+$mobileMin: 'mobileMin';
+$mobileMax: 'mobileMax';
+$tabletMin: 'tabletMin';
+$tabletMax: 'tabletMax';
+
+$breakpoints: (
+  'mobileMin': (
+    min-width: $mobile + 1 + px,
+  ),
+  'mobileMax': (
+    max-width: $mobile + px,
+  ),
+  'tabletMin': (
+    min-width: $tablet + 1 px,
+  ),
+  'tabletMax': (
+    max-width: $tablet + px,
+  ),
+) !default;
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+}
