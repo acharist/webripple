@@ -7,7 +7,7 @@
     "default": {
       "path": "src/components",
       "withStyle": true,
-      "withTest": false,
+      "withTest": true,
       "withStory": false,
       "withLazy": false,
       "withStyled": false,
@@ -17,7 +17,8 @@
         "index": ".templates/component/index.ts",
         "component": ".templates/component/TemplateName.tsx",
         "typeDeclare": ".templates/component/TemplateName.d.ts",
-        "style": ".templates/component/TemplateName.module.scss"
+        "style": ".templates/component/TemplateName.module.scss",
+        "test": ".templates/component/TemplateName.test.tsx"
       }
     }
   }
