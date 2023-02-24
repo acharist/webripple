@@ -21,6 +21,7 @@ body {
 body {
   position: relative;
   -webkit-font-smoothing: antialiased;
+  font-family: $primary-font;
 }
 
 *,
@@ -49,6 +50,7 @@ input[type='number'],
 textarea,
 button {
   -webkit-appearance: none;
+  appearance: none;
 }
 
 input::-webkit-credentials-auto-fill-button,
@@ -93,4 +95,8 @@ a {
 
 li {
   list-style: none;
+}
+
+p {
+  font-family: $secondary-font;
 }
