@@ -6,10 +6,10 @@ import { ILogoProps } from './Logo.d'
 import styles from './Logo.module.scss'
 
 export const Logo: FunctionComponent<ILogoProps> = ({
-  theme = 'dark',
+  variant = 'dark',
 }): JSX.Element => {
   return (
-    <div className={clsx(styles.root, styles[theme])}>
+    <div className={clsx(styles.root, styles[variant])}>
       <span className={styles.text}>Webripple</span>
       <Icon id="webripple" className={styles.icon} />
     </div>

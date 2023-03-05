@@ -1,0 +1,33 @@
+@import "src/styles/variables";
+@import "src/styles/breakpoints";
+
+.root {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $dark;
+}
+
+.cross, .vk {
+  position: absolute;
+  right: 40px;
+
+  @include respond-to($mobileMax) {
+    right: 20px;
+  }
+}
+
+.cross {
+  top: 65px;
+  
+  @include respond-to($mobileMax) {
+    top: 45px;
+  }
+}
+
+.vk {
+  bottom: 40px;
+}

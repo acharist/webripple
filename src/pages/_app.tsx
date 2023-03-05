@@ -1,6 +1,7 @@
 import '../styles/main.scss'
 import type { AppProps } from 'next/app'
 import { useState } from 'react'
+import Modal from 'react-modal'
 import {
   QueryClient,
   QueryClientProvider,
@@ -8,6 +9,10 @@ import {
   DehydratedState,
 } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
+import { Layout } from '@/components'
+import { AppProvider } from '@/contexts'
+
+Modal.setAppElement('#mobile-nav')
 
 function MyApp({
   Component,
@@ -18,7 +23,11 @@ function MyApp({
   return (
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydratedState}>
-        <Component {...pageProps} />
+        <AppProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </AppProvider>
         <ReactQueryDevtools initialIsOpen={false} />
       </Hydrate>
     </QueryClientProvider>

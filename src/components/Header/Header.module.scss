@@ -1,0 +1,32 @@
+@import "src/styles/variables";
+@import "src/styles/breakpoints";
+
+.root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $dark;
+  height: 30px;
+  margin-top: 60px;
+
+  @include respond-to($mobileMax) {
+    margin-top: 40px;
+  }
+}
+
+.nav, .link {
+  @include respond-to($tabletMax) {
+    display: none;
+  }
+}
+
+.button {
+  background-color: transparent;
+  display: block;
+
+  @include respond-to($tabletMin) {
+    display: none;
+  }
+}
+
+

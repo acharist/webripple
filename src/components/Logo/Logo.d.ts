@@ -1,5 +1,4 @@
-export type TTheme = 'light' | 'dark'
-
+import { TVariant } from '@/types'
 export interface ILogoProps {
-  theme?: TTheme
+  variant?: TVariant
 }

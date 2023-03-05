@@ -1,1 +1,1 @@
-export type TIcons = 'webripple'
+export type TIcons = 'webripple' | 'vk' | 'burger' | 'cross'

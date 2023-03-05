@@ -14,7 +14,7 @@ $breakpoints: (
     max-width: $mobile + px,
   ),
   'tabletMin': (
-    min-width: $tablet + 1 px,
+    min-width: $tablet + 1 + px,
   ),
   'tabletMax': (
     max-width: $tablet + px,
