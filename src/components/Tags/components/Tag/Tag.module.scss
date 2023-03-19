@@ -1,0 +1,38 @@
+@import "src/styles/variables";
+@import "src/styles/breakpoints";
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 24px;
+  min-width: 136px;
+  max-width: 136px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  box-shadow: 2px 2px 4px rgba($color: $light-gray, $alpha: 0.25);
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  @include respond-to($mobileMax) {
+    min-width: 120px;
+    max-width: 120px;
+  }
+}
+
+.text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+
+  @include respond-to($mobileMax) {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}

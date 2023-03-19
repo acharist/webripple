@@ -8,6 +8,7 @@
   color: $dark;
   height: 30px;
   margin-top: 60px;
+  margin-bottom: 120px;
 
   @include respond-to($mobileMax) {
     margin-top: 40px;

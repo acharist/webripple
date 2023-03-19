@@ -1,7 +1,8 @@
 @import "src/styles/variables";
 @import "src/styles/breakpoints";
 
-.active {
-  font-weight: 700;
-  pointer-events: none;
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 620px;
 }
