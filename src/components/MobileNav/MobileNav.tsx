@@ -4,7 +4,6 @@ import Modal from 'react-modal'
 import { Nav } from '@/components'
 import { useApp } from '@/contexts'
 import { Icon } from '@/UI'
-import { IMobileNavProps } from './MobileNav.d'
 
 import styles from './MobileNav.module.scss'
 
@@ -18,9 +17,7 @@ const customStyles = {
   },
 }
 
-export const MobileNav: FunctionComponent<
-  IMobileNavProps
-> = (): JSX.Element => {
+export const MobileNav: FunctionComponent = (): JSX.Element => {
   const { modalIsOpened, setModalIsOpened } = useApp()
 
   const handleCloseModal = () => {

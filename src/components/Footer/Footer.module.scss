@@ -1,0 +1,60 @@
+@import "src/styles/variables";
+@import "src/styles/breakpoints";
+
+.root {
+  background-color: $dark;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  color: $white;
+
+  @include respond-to($tabletMax) {
+    padding-top: 48px;
+    padding-bottom: 24px;
+  }
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 74px;
+
+  @include respond-to($tabletMax) {
+    margin-bottom: 54px;
+  }
+
+  @include respond-to($mobileMax) {
+    margin-bottom: 34px;
+  }
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  line-height: 1rem;
+
+  @include respond-to($mobileMax) {
+    flex-direction: column;
+  }
+}
+
+.documents {
+  display: flex;
+  padding-top: 16px;
+
+  & > li:not(:last-child) {
+    margin-right: 24px;
+  }
+}
+
+.copyright {
+  padding-top: 16px;
+  font-style: italic;
+}
+
+.nav {
+  @include respond-to($tabletMax) {
+    display: none;
+  }
+}

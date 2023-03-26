@@ -3,13 +3,10 @@ import { Logo, Nav } from '@/components'
 
 import { useApp } from '@/contexts'
 import { Icon } from '@/UI'
-import { IHeaderProps } from './Header.d'
 
 import styles from './Header.module.scss'
 
-export const Header: FunctionComponent<
-  IHeaderProps
-> = (): JSX.Element => {
+export const Header: FunctionComponent = (): JSX.Element => {
   const { setModalIsOpened } = useApp()
 
   const handleOpenModal = () => {
