@@ -1,0 +1,9 @@
+@import "src/styles/variables";
+@import "src/styles/breakpoints";
+
+.root {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: $white;
+}

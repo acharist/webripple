@@ -1,0 +1,13 @@
+@import 'src/styles/breakpoints';
+
+.tags {
+  margin-bottom: 120px;
+
+  @include respond-to($tabletMax) {
+    margin-bottom: 100px;
+  }
+
+  @include respond-to($mobileMax) {
+    margin-bottom: 70px;
+  }
+}
