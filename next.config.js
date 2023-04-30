@@ -6,6 +6,15 @@ const nextConfig = {
   swcMinify: true,
   output: 'standalone',
   publicRuntimeConfig,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '5001',
+      },
+    ],
+  },
 }
 
 module.exports = nextConfig

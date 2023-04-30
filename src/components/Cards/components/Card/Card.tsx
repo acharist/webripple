@@ -1,3 +1,4 @@
+import getConfig from 'next/config'
 import Image from 'next/future/image'
 import Link from 'next/link'
 import { FunctionComponent } from 'react'
@@ -6,6 +7,9 @@ import { ICardProps } from './Card.d'
 
 import styles from './Card.module.scss'
 import { Tags } from './components'
+const { publicRuntimeConfig } = getConfig()
+
+const { apiDomain } = publicRuntimeConfig
 
 export const Card: FunctionComponent<ICardProps> = ({
   image,
@@ -17,7 +21,7 @@ export const Card: FunctionComponent<ICardProps> = ({
   return (
     <div className={styles.root}>
       <Image
-        src={`/${image}`}
+        src={`${apiDomain}${image}`}
         alt={title}
         className={styles.image}
         fill

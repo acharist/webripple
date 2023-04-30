@@ -1,12 +1,13 @@
 import { FunctionComponent } from 'react'
 import { Cards, Tags } from '@/components'
 
-import { useTags } from '@/hooks'
+import { useTags, usePosts } from '@/hooks'
 
 import styles from './Home.module.scss'
 
 export const HomeModule: FunctionComponent = (): JSX.Element => {
   const tags = useTags()
+  const posts = usePosts()
 
   const tagsJsx = (
     <div className={styles.tags}>
@@ -14,10 +15,12 @@ export const HomeModule: FunctionComponent = (): JSX.Element => {
     </div>
   )
 
+  const postsJsx = posts.isSuccess && <Cards posts={posts.data} />
+
   return (
     <>
       {tagsJsx}
-      <Cards />
+      {postsJsx}
     </>
   )
 }
